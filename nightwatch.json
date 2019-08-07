@@ -1,0 +1,35 @@
+{
+    "src_folders": ["test"],
+    "output_folder": "C:/margadarshi/reports",
+    "globals_path": "global.js",
+    "webdriver": {
+      "start_process": false,
+      "server_path": "./node_modules/chromedriver/lib/chromedriver/chromedriver",
+      "port": 9515
+    },
+    "test_settings": {
+      "default": {
+        "launch_url": "http://demo.divami.com/intelliscan1/",
+        "desiredCapabilities": {
+          "browserName": "chrome",
+          "mocha_tests": {
+            "test_runner": {
+              "type": "mocha",
+              "options": {
+                "ui": "tdd",
+            "reporter": "mochawesome-screenshots",
+            "reporterOptions": {
+              "takePassedScreenshot": true,
+              "clearOldScreenshots": true,
+              "shortScrFileNames": false,
+              "jsonReport": false,
+              "multiReport": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "test_runner": "mocha"
+  }
